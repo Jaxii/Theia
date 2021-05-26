@@ -10,16 +10,30 @@ You should have received a copy of the GNU General Public License along with thi
 */
 
 package dev.jaxi
-
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents
+import com.google.gson
 import net.fabricmc.api.ModInitializer
-
+import net.minecraft.server.MinecraftServer
+import net.minecraft.util.profiler.Profiler
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
+import dev.jaxi.Config
 
 class TheiaMod extends ModInitializer {
 
 
+	val MODID = "theia"
+	val MOD_NAME = "Theia Anti-Cheat"
+	val LOG: Logger = LogManager.getLogger(MOD_NAME)
+
 	override def onInitialize(): Unit = {
 
-		print("it works!!!!!!!")
+
+
+		ServerLifecycleEvents.SERVER_STOPPING.register((_: MinecraftServer) => {
+			LOG.traceExit()
+		})
+
 
 
 	}
