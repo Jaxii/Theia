@@ -4,13 +4,16 @@
   "package": "dev.jaxi.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "MixinAbstractBlock",
+    "MixinBlock",
+    "MixinEntity",
+    "MixinEntityPositionS2CPacket",
+    "MixinOreBlock",
+    "MixinPlayerMoveC2SPacket",
+    "MixinServerPlayNetworkHandler",
+    "MixinServerPlayPacketListener"
   ],
   "client": [
-
-  ],
-
-  "server": [
-    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

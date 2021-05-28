@@ -19,8 +19,22 @@ import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import dev.jaxi.Config
 
-class TheiaMod extends ModInitializer {
 
+
+/*
+
+important?
+
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents
+
+
+ */
+
+import net.minecraft.entity.mob.EndermanEntity
+//Anti-xray: Don't render/tick all ore blocks that are naturally generated and not touching air, and check on every block break if it "reveals" ores to render them
+
+
+class TheiaMod extends ModInitializer {
 
 	val MODID = "theia"
 	val MOD_NAME = "Theia Anti-Cheat"
